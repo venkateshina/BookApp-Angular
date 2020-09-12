@@ -1,0 +1,40 @@
+
+  <div class="main-div">
+    <mat-card class="z-depth center" flex="50" >
+        <p style="text-align:center">BookShop!</p>
+        <div class="container">
+       
+           
+            <img src="./assets/users.png" class="imageprop">
+            <form  class="normal-form">
+                <div class="controles-container">
+                    <input type="hidden" formControlName="$key">
+                    <mat-form-field>
+                      <input formControlName="fullName" matInput placeholder="Full Name*">
+                      <mat-error>This field is mandatory.</mat-error>
+                    </mat-form-field>
+                    <br/>
+                    <mat-form-field>
+                      <input formControlName="email" matInput placeholder="Email">
+                      <mat-error>Invalid email address.</mat-error>
+                    </mat-form-field>
+                    <br/>
+                    <mat-form-field>
+                        <input formControlName="password" matInput placeholder="Password">
+                        <mat-error>Invalid Passweod.</mat-error>
+                      </mat-form-field>
+                      <br/>
+                    <mat-form-field>
+                      <input formControlName="mobile" matInput placeholder="Mobile*">
+                     
+                    </mat-form-field>
+                    <br/>
+                    
+                  </div>
+              </form>
+        
+      
+      </div>
+    </mat-card>
+  </div>
+  

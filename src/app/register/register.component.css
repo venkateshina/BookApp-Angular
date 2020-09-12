@@ -1,0 +1,17 @@
+.imageprop{
+    height: 100px;
+    width: 10%;
+    background-color: powderblue;
+}
+
+.center{
+    width: 75%;
+    margin: 10px auto;
+  }
+  
+  .main-div{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
