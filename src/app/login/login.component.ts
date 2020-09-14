@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 import { LoginserviceService } from '../loginservice.service';
 
 @Component({
@@ -8,13 +9,12 @@ import { LoginserviceService } from '../loginservice.service';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(public service : LoginserviceService) { }
+  constructor(public service : LoginserviceService ,private toaster:ToastrService) { }
 
   ngOnInit(): void {
   }
-  onClear() {
-    this.service.form.reset();
-    this.service.initializeFormGroup();
-  }
 
+show(){
+  this.toaster.success('Successfully login','Book Shop',{timeOut :5000})
+}
 }

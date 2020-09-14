@@ -1,1 +1,13 @@
-<p>home works!</p>
+<div >
+    <img src="https://www.guru99.com/images/2/060520_1127_10BESTAngul1.jpg">
+    <br/>
+    <input type="text" [(ngModel)]="comment" name="comment" placeholder="comment here">
+    <br/>
+    <button (click)="post()"> comment</button>
+    <br/>
+   <div *ngFor = "let c of postcomment">
+    <p>
+        {{c}}
+    </p>
+   </div>
+</div>

@@ -1,32 +1,40 @@
 
-  <div class="main-div">
-    <mat-card class="z-depth center" flex="50" >
-        <p style="text-align:center">WelCome to Bookshop!</p>
-        <div class="container">
-       
-           
-            <img src="./assets/single_user.png" class="imageprop">
-            <form  class="normal-form">
-                <div class="controles-container">
-                    <input type="hidden" formControlName="$key">
-                  
-                    <mat-form-field>
-                      <input formControlName="email" matInput placeholder="Email">
-                      <mat-error>Invalid email address.</mat-error>
-                    </mat-form-field>
-                    <br/>
-                    <mat-form-field>
-                        <input formControlName="password" matInput placeholder="Password">
-                        <mat-error>Invalid Passweod.</mat-error>
+  <div style="min-width: 60%; min-height: 60%; background-image:url('https://images.theconversation.com/files/45159/original/rptgtpxd-1396254731.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=754&fit=clip') ;">
+  
+    <div  class="main-div">
+      <mat-card class="z-depth center" class="example-card" flex="100" >
+          <p style="text-align:center">WelCome to Bookshop!</p>
+          <div class="container">
+         
+             
+              <img src="./assets/single_user.png" class="imageprop">
+              <form  [formGroup]= "service.form" class="example-cardd" class="normal-form">
+                  <div class="controles-container">
+                      <input type="hidden" formControlName="$key">
+                    
+                      <mat-form-field>
+                        <input formControlName="email" matInput placeholder="Email">
+                        <mat-error></mat-error>
                       </mat-form-field>
                       <br/>
-                    
-                    
-                  </div>
-              </form>
+                      <mat-form-field>
+                          <input formControlName="password" matInput placeholder="Password">
+                          <mat-error></mat-error>
+                        </mat-form-field>
+                        <br/>
+                      
+                        <div class="button-row">
+                          <button mat-raised-button color="primary" type="submit"  (click)="show()">Login</button>
+                     
+                        </div>
+                    </div>
+                </form>
+          
         
-      
-      </div>
-    </mat-card>
+        </div>
+        <br/>
+        <small class="float-right" [routerLink]="['/register']" >New User? Register Here</small>
+      </mat-card>
+    </div>
   </div>
   

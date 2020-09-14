@@ -10,9 +10,9 @@ export class LoginserviceService {
   form: FormGroup = new FormGroup({
     $key: new FormControl(null),
     fullName: new FormControl('', Validators.required),
-    email: new FormControl('', Validators.email),
-    mobile: new FormControl('', [Validators.required, Validators.minLength(8)]),
-    city: new FormControl('')
+    email: new FormControl('',[ Validators.required,Validators.email,] ),
+    mobile: new FormControl('', [Validators.required,Validators.minLength(8)]),
+    password: new FormControl('',[ Validators.required,Validators.email,])
    
   });
 

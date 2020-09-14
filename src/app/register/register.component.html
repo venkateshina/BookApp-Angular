@@ -1,16 +1,20 @@
 
   <div class="main-div">
-    <mat-card class="z-depth center" flex="50" >
+    <div class="image">
+      <img src="https://i0.wp.com/dightonlibrary.org/wp-content/uploads/2020/08/books.jpeg?fit=500%2C750&ssl=1" width="800" height="600">
+      </div>
+    
+    <mat-card class="z-depth center" class="example-card" flex="50"  >
         <p style="text-align:center">BookShop!</p>
         <div class="container">
        
            
             <img src="./assets/users.png" class="imageprop">
-            <form  class="normal-form">
+            <form [formGroup]= "service.form"class="normal-form">
                 <div class="controles-container">
                     <input type="hidden" formControlName="$key">
                     <mat-form-field>
-                      <input formControlName="fullName" matInput placeholder="Full Name*">
+                      <input formControlName="fullName" matInput placeholder="Full Name">
                       <mat-error>This field is mandatory.</mat-error>
                     </mat-form-field>
                     <br/>
@@ -25,16 +29,23 @@
                       </mat-form-field>
                       <br/>
                     <mat-form-field>
-                      <input formControlName="mobile" matInput placeholder="Mobile*">
-                     
+                      <input formControlName="mobile" matInput placeholder="Mobile">
+                      <mat-error *ngIf="service.form.controls['mobile'].errors?.required">This field is mandatory.</mat-error>
+                      <mat-error *ngIf="service.form.controls['mobile'].errors?.minlength">Minimum 8 charactors needed.</mat-error>
                     </mat-form-field>
                     <br/>
-                    
+                    <div class="button-row">
+                      <button mat-raised-button color="primary" type="submit" [disabled]="service.form.invalid" (click)="show()">Submit</button>
+                 
+                    </div>
                   </div>
               </form>
         
       
       </div>
+      <br/>
+      <small class="float-right" [routerLink]="['/login']" >Already Registerede? Login Here</small>
     </mat-card>
+
   </div>
   

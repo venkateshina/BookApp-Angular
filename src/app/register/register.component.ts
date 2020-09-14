@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
+import { LoginserviceService } from '../loginservice.service';
 
 @Component({
   selector: 'app-register',
@@ -7,8 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(public service : LoginserviceService,private toaster:ToastrService) { }
+  show(){
+    this.toaster.success('Successfully Registered','Book Shop',{timeOut :5000})
+  }
   ngOnInit(): void {
   }
 
